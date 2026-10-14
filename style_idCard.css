@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #e8ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    font-family: "Noto Sans Bengali", Arial, sans-serif;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card {
+    width: 700px;
+    min-height: 420px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #b8b8b8;
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   WATERMARK
+========================= */
+
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+    font-size: 80px;
+    font-weight: 700;
+
+    color: rgba(0, 100, 70, 0.07);
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    background: linear-gradient(
+        90deg,
+        #006a4e,
+        #00875f
+    );
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Bangladesh Flag */
+
+.flag {
+    width: 55px;
+    height: 35px;
+
+    background: #006a4e;
+
+    border: 2px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 15px;
+}
+
+.flag span {
+    width: 20px;
+    height: 20px;
+
+    background: #f42a41;
+
+    border-radius: 50%;
+}
+
+
+/* Header Text */
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h3 {
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+.header-text p {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* Demo */
+
+.demo {
+    font-size: 11px;
+    font-weight: 700;
+
+    background: #d62828;
+
+    padding: 6px 9px;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   CARD BODY
+========================= */
+
+.card-body {
+    display: flex;
+
+    padding: 25px;
+
+    gap: 30px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-section {
+    width: 150px;
+
+    text-align: center;
+}
+
+.photo {
+    width: 145px;
+    height: 175px;
+
+    border: 3px solid #006a4e;
+
+    padding: 4px;
+
+    background: #f5f5f5;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.photo-text {
+    margin-top: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.information {
+    flex: 1;
+
+    padding-top: 5px;
+}
+
+.info-row {
+    display: grid;
+
+    grid-template-columns: 105px 15px 1fr;
+
+    gap: 5px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    color: #222;
+}
+
+.info-row .label {
+    font-weight: 600;
+    color: #006a4e;
+}
+
+.info-row strong {
+    color: #111;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.bottom {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 0 30px 18px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Signature */
+
+.signature {
+    text-align: center;
+}
+
+.signature-line {
+    width: 140px;
+
+    border-bottom: 1px solid #555;
+
+    margin-bottom: 4px;
+}
+
+.signature small {
+    font-size: 10px;
+    color: #555;
+}
+
+
+/* QR */
+
+.qr {
+    text-align: center;
+}
+
+.qr-box {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #222;
+
+    font-size: 40px;
+
+    background: #fff;
+}
+
+.qr small {
+    font-size: 9px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    background: #f1f1f1;
+
+    border-top: 1px solid #ddd;
+
+    padding: 8px;
+
+    color: #c62828;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    .card {
+        width: 100%;
+    }
+
+    .card-body {
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .header {
+        height: auto;
+        padding: 12px;
+    }
+
+    .header-text h3 {
+        font-size: 16px;
+    }
+
+    .header-text p {
+        font-size: 9px;
+    }
+
+    .demo {
+        font-size: 8px;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information {
+        width: 100%;
+    }
+
+    .info-row {
+        grid-template-columns: 90px 12px 1fr;
+        font-size: 12px;
+    }
+
+    .watermark {
+        font-size: 50px;
+    }
+
+}

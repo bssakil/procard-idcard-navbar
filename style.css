@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+/* Profile Card */
+.profile-card {
+    width: 350px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Cover */
+.cover {
+    height: 120px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Profile Image */
+.profile-image {
+    width: 130px;
+    height: 130px;
+    margin: -65px auto 0;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.profile-content {
+    padding: 20px 25px 30px;
+}
+
+.profile-content h2 {
+    font-size: 25px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.profession {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    background: #2563eb;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    background: #111827;
+}
+
+/* Button */
+.contact-btn {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 30px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+
+    .profile-card {
+        width: 90%;
+    }
+
+}

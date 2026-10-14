@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header */
+
+.header {
+    height: 70px;
+    padding: 0 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #111;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-menu a:hover {
+    color: #00bcd4;
+}
+
+
+/* Menu Button */
+
+.menu-btn {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* Sections */
+
+section {
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+
+    /* Show menu button */
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* Hide navigation */
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #111;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        text-align: center;
+    }
+
+
+    /* Open menu */
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+
+    .nav-menu a {
+        padding: 18px;
+
+        border-top: 1px solid #333;
+    }
+
+}
